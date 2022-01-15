@@ -68,6 +68,8 @@ function draw() {
  
   //Engine.update(engine);
   
+  
+  
   textSize(20);
   fill("lightyellow");
   text("Drag the polygon to destroy the blocks",300,30);
