@@ -14,7 +14,7 @@ class Block{
         World.add(world, this.body);
       }
       display(){
-        if(this.body.speed < 3){
+        if(this.body.speed > 3){
         var angle = this.body.angle;
         var pos= this.body.position;
         
@@ -28,6 +28,7 @@ class Block{
           World.remove(world,this.body)
           push()
           this.visibility=this.visibility-5 
+            tint(255,126);
           pop()
         }
       }
