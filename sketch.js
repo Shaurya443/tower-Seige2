@@ -9,9 +9,6 @@ var stand1,stand2;
 var polygon;
 var slingShot;
 var polygon_img;
-
-var gameState = "onSling";
-
 function preload(){
   polygon_img=loadImage("polygon.png");
 }
@@ -127,14 +124,14 @@ function mouseDragged(){
     Matter.Body.setPosition(this.polygon, {x: mouseX , y: mouseY});
 }
 }
+function mouseDragged(){
+  Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
+}
 function mouseReleased(){
   slingShot.fly();
-  gameState = "launched";
 }
-//write code for extra chance of the player
 function keyPressed(){
-  if(keyCode === 32){
-  slingShot.attatch(this.polygon_img.body)
-  gameState="onSling";
-  }
+if(keyCode===32){
+  slingShot.attach(this.polygon)
+}
 }
