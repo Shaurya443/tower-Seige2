@@ -119,11 +119,8 @@ function draw() {
   slingShot.display();
   
 }
-function mouseDragged(){
- if (gameState!=="launched"){
-    Matter.Body.setPosition(this.polygon, {x: mouseX , y: mouseY});
-}
-}
+
+
 function mouseDragged(){
   Matter.Body.setPosition(this.polygon,{x:mouseX,y:mouseY});
 }
@@ -134,4 +131,5 @@ function keyPressed(){
 if(keyCode===32){
   slingShot.attach(this.polygon)
 }
+
 }
